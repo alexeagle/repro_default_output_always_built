@@ -16,7 +16,7 @@ def a_impl(ctx):
     
     
     return [
-        DefaultInfo(files = depset([broken])),
+        DefaultInfo(files = depset([broken]), runfiles = ctx.runfiles([broken])),
         OutputGroupInfo(
             group1 = depset([good])
         )
