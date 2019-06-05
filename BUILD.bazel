@@ -1,0 +1,11 @@
+load(":defs.bzl", "a")
+
+a(
+    name = "a_rule"
+)
+
+filegroup(
+    name = "fgroup",
+    srcs = [":a_rule"],
+    output_group = "group1"
+)
